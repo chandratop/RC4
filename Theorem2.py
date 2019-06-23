@@ -46,6 +46,7 @@ def check(j_seq):
     else:
         return True
 
+
 # * Main
 
 theorem = True
