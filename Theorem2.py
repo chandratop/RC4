@@ -41,10 +41,7 @@ def check(j_seq):
         {param} j_seq : Three consecutive values of j in a list
     '''
 
-    if j_seq[2] == (j_seq[1] + 1) == (j_seq[0] + 2):
-        return False
-    else:
-        return True
+    return not (j_seq[2] == (j_seq[1] + 1) == (j_seq[0] + 2))
 
 
 # * Main

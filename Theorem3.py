@@ -43,10 +43,7 @@ def check(j_seq):
         {param} j_seq : Four consecutive values of j in a list
     '''
 
-    if j_seq[0] == j_seq[1] == j_seq[2] == j_seq[3]:
-        return False
-    else:
-        return True
+    return not (j_seq[0] == j_seq[1] == j_seq[2] == j_seq[3])
 
 
 # * Main

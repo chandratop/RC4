@@ -42,10 +42,7 @@ def check1(j_seq):
         {param} j_seq : Four consecutive values of j in a list
     '''
 
-    if j_seq[0] == j_seq[1] == j_seq[2]:
-        return True
-    else:
-        return False
+    return j_seq[0] == j_seq[1] == j_seq[2]
 
 def check2(i, j):
     '''
@@ -103,7 +100,7 @@ while number_of_shuffles > 0 and theorem is True:
         i_2 = i
 
     # To check if the Corollary is wrong at the start itself
-    # even though the j_sequence test is passeds (check1)
+    # even though the j_sequence test is passed (check1)
     if check1(j_sequence) is True:
         if check2(i_2, j_sequence[2]) and check3(S_sequence, i_2, j_sequence) is False:
             print("Corollary 3 is wrong")
@@ -120,7 +117,7 @@ while number_of_shuffles > 0 and theorem is True:
         j_sequence[2], S_sequence[2] = j, arr
 
         # To check if the Corollary is wrong
-        # even though the j_sequence test is passeds (check1)
+        # even though the j_sequence test is passed (check1)
         if check1(j_sequence) is True:
             if check2(i_2, j_sequence[2]) and check3(S_sequence, i_2, j_sequence) is False:
                 print("Corollary 3 is wrong")
