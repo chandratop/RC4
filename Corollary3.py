@@ -39,7 +39,7 @@ def check1(j_seq):
     In the sequence of j's if j(r) = j(r+1) = j(r+2),
     then return True, else, return False.
     r is the index.
-        {param} j_seq : Four consecutive values of j in a list
+        {param} j_seq : Three consecutive values of j in a list
     '''
 
     return j_seq[0] == j_seq[1] == j_seq[2]
