@@ -70,7 +70,7 @@ def check3(S_seq, i, j_seq):
 
 # * Main
 
-theorem = True
+corollary = True
 
 # Asks how many shuffles it needs to so the algorithm on
 number_of_shuffles = int(input("How many shuffles should it check : "))
@@ -79,7 +79,7 @@ number_of_shuffles = int(input("How many shuffles should it check : "))
 # -2 since we do 2 rounds to create the initial j_sequence [line 46-50]
 number_of_rounds = int(input("How many times should each shuffle run : ")) - 2
 
-while number_of_shuffles > 0 and theorem is True:
+while number_of_shuffles > 0 and corollary is True:
 
     # Initial values
     arr = [x for x in range(16)]
@@ -125,5 +125,5 @@ while number_of_shuffles > 0 and theorem is True:
 
     number_of_shuffles -= 1
 
-if theorem is True:
+if corollary is True:
     print("Corollary hasn't been proved False")
