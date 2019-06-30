@@ -34,18 +34,22 @@ def nextarr(arr, i, j, N=16):
     return arr, i, j
 
 
-def check(j_seq):
+def check(j_seq, N):
     '''
     If four consecutive values in the sequence of j
     are decreasing by the same number then return False and that number.
     Otherwise return True (for Theorem OK) and None
+    But that number has to be less than N - 1
         {param} j_seq : Four consecutive values of j in a list
+        {param} N : length of array
     '''
     
     difference = None
     condition = j_seq[0] - j_seq[1] == j_seq[1] - j_seq[2] == j_seq[2] - j_seq[3]
-    if condition is True:
+    if condition is True and difference < N - 1:
         difference = j_seq[0] - j_seq[1]
+    else:
+        condition, difference = False, None
 
     return not(condition), difference
 
@@ -77,7 +81,7 @@ while number_of_shuffles > 0 and theorem is True:
         j_sequence.append(j)
 
     # To check if the Theorem is wrong at the start itself
-    checker, difference = check(j_sequence)
+    checker, difference = check(j_sequence, 16)
     if checker is False:
         print("Theorem 4 is wrong and difference is ", difference)
 
@@ -93,7 +97,7 @@ while number_of_shuffles > 0 and theorem is True:
         j_sequence[3] = j
 
         # To check if the Theorem is wrong
-        checker, difference = check(j_sequence)
+        checker, difference = check(j_sequence, 16)
         if checker is False:
             print("Theorem 4 is wrong and difference is ", difference)
 
