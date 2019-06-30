@@ -57,6 +57,7 @@ def check(j_seq, N):
 # * Main
 
 theorem = True
+N = 16
 
 # Asks how many shuffles it needs to so the algorithm on
 number_of_shuffles = int(input("How many shuffles should it check : "))
@@ -68,7 +69,7 @@ number_of_rounds = int(input("How many times should each shuffle run : ")) - 3
 while number_of_shuffles > 0 and theorem is True:
 
     # Initial values
-    arr = [x for x in range(16)]
+    arr = [x for x in range(N)]
     shuffle(arr)
     i, j = 0, 0
 
@@ -81,7 +82,7 @@ while number_of_shuffles > 0 and theorem is True:
         j_sequence.append(j)
 
     # To check if the Theorem is wrong at the start itself
-    checker, difference = check(j_sequence, 16)
+    checker, difference = check(j_sequence, N)
     if checker is False:
         print("Theorem 4 is wrong and difference is ", difference)
 
@@ -97,7 +98,7 @@ while number_of_shuffles > 0 and theorem is True:
         j_sequence[3] = j
 
         # To check if the Theorem is wrong
-        checker, difference = check(j_sequence, 16)
+        checker, difference = check(j_sequence, N)
         if checker is False:
             print("Theorem 4 is wrong and difference is ", difference)
 
